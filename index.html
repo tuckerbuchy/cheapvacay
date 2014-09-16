@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="map.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div id="map"></div>
+<script>
+var map = L.map('map').setView([51.505, -0.09], 3);
+L.tileLayer('http://{s}.tiles.mapbox.com/v3/tuckerbuchy.jh233fp8/{z}/{x}/{y}.png', {
+	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	maxZoom: 18
+	}).addTo(map);
+
+$.getJSON('data/countries-hires.geojson', function(data) {
+   console.log(data);
+   L.geoJson(data).addTo(map);
+});
+</script>
