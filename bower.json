@@ -1,0 +1,29 @@
+{
+  "name": "cheapvacay",
+  "version": "0.0.1",
+  "authors": [
+    "Ibrahim Muhammad <ibrahim.mohammad@gmail.com>"
+  ],
+  "description": "Cheap Travel Search",
+  "license": "Commercial",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "d3": "~3.3.13",
+    "semantic-ui": "~0.19.3",
+    "datamaps": "~0.3.4",
+    "topojson": "~1.6.18",
+
+    "underscore": "~1.7.0",
+    "selectize": "~0.11.2",
+    "c3": "~0.3.0"
+  }
+}
