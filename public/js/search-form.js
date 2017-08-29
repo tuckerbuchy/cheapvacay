@@ -81,7 +81,7 @@ $(document).ready(function(){
 });
 
 function search(options) {
-  $.post('/search', options, function (response) {
+  $.post('http://localhost:5000/search', options, function (response) {
     response = JSON.parse(response);
     gathered_country_data = response;
 

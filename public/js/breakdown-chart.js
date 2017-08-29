@@ -12,13 +12,9 @@ function generateBreakdownChart(country){
   
   $("#total").text("$"+Math.round(gathered_country_data[country]["estimated_costs"]["total"]));
 
-  console.log("VALUESSSSS::::");
   console.log(values);
-  if (values.flight){
-    values_c3.push(['flight', values.flight]);
-  }
-  if (values.accomodation){
-    values_c3.push(['accomodation', values.accomodation]);
+  if (values.rent){
+    values_c3.push(['rent', values.rent]);
   }
   if (values.cigarettes){
     values_c3.push(['smoking', values.cigarettes]);
