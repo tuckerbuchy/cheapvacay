@@ -9,8 +9,13 @@ from search import get_food_cost
 client = pymongo.MongoClient('mongodb://cheapvacay_read:password@ds161022.mlab.com:61022/cheapvacay')
 db = client['cheapvacay']
 
-app = Flask(__name__)
+app = Flask(__name__,  static_url_path='')
 CORS(app)
+
+@app.route('/')
+def root():
+    return app.send_static_file('index.html')
+
 
 @app.route('/search', methods=['POST'])
 @cross_origin()
