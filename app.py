@@ -9,7 +9,7 @@ from search import get_food_cost
 client = pymongo.MongoClient('mongodb://cheapvacay_read:password@ds161022.mlab.com:61022/cheapvacay')
 db = client['cheapvacay']
 
-app = Flask(__name__,  static_url_path='')
+app = Flask(__name__,  static_url_path='public')
 CORS(app)
 
 @app.route('/')
