@@ -1,6 +1,7 @@
 import json
+import os
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_cors import CORS, cross_origin
 import pymongo
 
@@ -9,13 +10,12 @@ from search import get_food_cost
 client = pymongo.MongoClient('mongodb://cheapvacay_read:password@ds161022.mlab.com:61022/cheapvacay')
 db = client['cheapvacay']
 
-app = Flask(__name__,  static_url_path='public')
+app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
 def root():
     return app.send_static_file('index.html')
-
 
 @app.route('/search', methods=['POST'])
 @cross_origin()
